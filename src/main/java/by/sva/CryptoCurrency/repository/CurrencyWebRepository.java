@@ -22,6 +22,7 @@ public class CurrencyWebRepository {
 		currencies = currencyRepository.findAll();
 	}
 	
+	// не используется
 	// получить котировки валют и обновить БД
 	// не самый оптимальный способ, т.к. на каждую валюту отправляется отдельный запрос
 	public List<Currency> loadCurrencies() {
@@ -46,7 +47,7 @@ public class CurrencyWebRepository {
 		currencies = Arrays.asList(restTemplate.getForObject(url, Currency[].class)); // преобразовать массив в коллекцию
 	    currencyRepository.saveAll(currencies);
 		
-	    System.out.println("Currencies updated");
+	    //System.out.println("Currencies updated");
 		return currencies;
 	}
 

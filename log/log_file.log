@@ -1,28 +1,4 @@
-2022-11-06 15:42:08 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.37% in 7d
-2022-11-06 15:42:18 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.37% in 7d
-2022-11-06 15:42:28 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.37% in 7d
-2022-11-06 15:42:38 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.37% in 7d
-2022-11-06 15:43:36 WARN  CurrencyService:56 - Symbol - ETH, User - Sam, The rate has changed by 1.37% in 24h
-2022-11-06 15:43:46 WARN  CurrencyService:56 - Symbol - ETH, User - Sam, The rate has changed by 1.37% in 24h
-2022-11-06 15:43:56 WARN  CurrencyService:56 - Symbol - ETH, User - Sam, The rate has changed by 1.37% in 24h
-2022-11-06 15:44:07 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:44:18 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:44:28 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:44:38 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:44:48 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:44:58 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:45:08 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:45:19 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:45:29 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:45:39 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:45:49 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:45:59 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:46:09 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:46:19 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:46:30 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:46:40 WARN  CurrencyService:60 - Symbol - BTC, User - Alex, The rate has changed by 2.43% in 7d
-2022-11-06 15:46:50 WARN  CurrencyService:56 - Symbol - ETH, User - Sam, The rate has changed by 1.37% in 24h
-2022-11-06 15:47:00 WARN  CurrencyService:56 - Symbol - ETH, User - Sam, The rate has changed by 1.37% in 24h
-2022-11-06 15:47:10 WARN  CurrencyService:56 - Symbol - ETH, User - Sam, The rate has changed by 1.37% in 24h
-2022-11-06 15:47:20 WARN  CurrencyService:56 - Symbol - ETH, User - Sam, The rate has changed by 1.37% in 24h
-2022-11-06 15:47:31 WARN  CurrencyService:56 - Symbol - ETH, User - Sam, The rate has changed by 1.37% in 24h
+2022-12-05 22:57:27 WARN  CurrencyService:63 - Symbol: BTC, User: Alex, The rate has changed by -1.03% in 24h
+2022-12-05 22:57:27 WARN  CurrencyService:67 - Symbol: BTC, User: Alex, The rate has changed by 4.34% in 7d
+2022-12-05 23:37:09 WARN  CurrencyService:66 - Symbol: BTC, User: Alex, The rate has changed by 4.27% in 7d
+2022-12-05 23:38:09 WARN  CurrencyService:66 - Symbol: BTC, User: Alex, The rate has changed by 4.27% in 7d

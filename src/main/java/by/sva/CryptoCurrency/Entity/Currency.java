@@ -13,8 +13,8 @@ public class Currency {
 	private String symbol;
 	private String name;
 	private Double price_usd;
-	private Double percent_change_24h;
 	private Double percent_change_1h;
+	private Double percent_change_24h;
 	private Double percent_change_7d;
 	
 	public Currency() {
@@ -26,8 +26,8 @@ public class Currency {
 		this.symbol = symbol;
 		this.name = name;
 		this.price_usd = price_usd;
-		this.percent_change_24h = percent_change_24h;
 		this.percent_change_1h = percent_change_1h;
+		this.percent_change_24h = percent_change_24h;
 		this.percent_change_7d = percent_change_7d;
 	}
 
@@ -62,6 +62,14 @@ public class Currency {
 	public void setPrice_usd(Double price_usd) {
 		this.price_usd = price_usd;
 	}
+	
+	public Double getPercent_change_1h() {
+		return percent_change_1h;
+	}
+
+	public void setPercent_change_1h(Double percent_change_1h) {
+		this.percent_change_1h = percent_change_1h;
+	}
 
 	public Double getPercent_change_24h() {
 		return percent_change_24h;
@@ -69,14 +77,6 @@ public class Currency {
 
 	public void setPercent_change_24h(Double percent_change_24h) {
 		this.percent_change_24h = percent_change_24h;
-	}
-
-	public Double getPercent_change_1h() {
-		return percent_change_1h;
-	}
-
-	public void setPercent_change_1h(Double percent_change_1h) {
-		this.percent_change_1h = percent_change_1h;
 	}
 
 	public Double getPercent_change_7d() {

@@ -34,10 +34,16 @@ public class CryptoController {
 		}
 	}
 	
-	// для конкретного пользователя проверяется изменение курса выбранной валюты
+	// включить лог изменения курса выбранной валюты для указанного пользователя
 	@PostMapping("/notify")
 	public ResponseEntity notifyUser(@RequestBody User user) {
-		return ResponseEntity.ok(currencyService.notifyUser(user));
+		
+		user = currencyService.notifyUser(user);
+		if(user != null) {
+			return ResponseEntity.ok(user);
+		}
+		
+		return ResponseEntity.badRequest().body("Currency not found");
 	}
 	
 }

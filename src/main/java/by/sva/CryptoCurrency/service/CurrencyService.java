@@ -15,8 +15,7 @@ public class CurrencyService {
 	private CurrencyRepository currencyRepository;
 	private CurrencyWebRepository currencyWebRepository;
 	private static final Logger LOGGER = Logger.getLogger(CurrencyService.class);
-	List<Currency> currencies;
-	User user;
+	private User user;
 
 	public CurrencyService(CurrencyRepository currencyRepository, CurrencyWebRepository currencyWebRepository) {
 		this.currencyRepository = currencyRepository;
@@ -39,30 +38,33 @@ public class CurrencyService {
 		} else {
 			this.user = user;
 		}
+
 		return this.user;
 	}
 	
 	// проверить изменения курса
-	public void check() {
+	public void check(List<Currency> currencies) {
 		if(user != null) {
 			// выбрать из списка валюту, которую выбрал пользователь
 			Currency currency = currencies.get(currencies.indexOf(user.getCurrency()));
+						
+			double percentSinceRegistration = Math.round((currency.getPrice_usd()/user.getCurrency().getPrice_usd()-1)*10000)/100.0;
 			
-			if (Math.abs(currency.getPrice_usd()/user.getCurrency().getPrice_usd()*100-100) > 1) { // запись в лог при изменении курса более, чем на 1% с момента регистрации пользователя
+			if (Math.abs(percentSinceRegistration) > 1) { // запись в лог при изменении курса более, чем на 1% с момента регистрации пользователя
 				LOGGER.warn("Symbol: " + user.getCurrency().getSymbol() + ", User: " + user.getUsername() + ", Rate changed by "
-						+ Math.abs(user.getCurrency().getPercent_change_1h()) + "% since registration");
+						+ percentSinceRegistration + "% since registration");
 			}
 			if (Math.abs(currency.getPercent_change_1h()) > 1) { // запись в лог при изменении курса более, чем на 1% за последний час
 				LOGGER.warn("Symbol: " + user.getCurrency().getSymbol() + ", User: " + user.getUsername() + ", The rate has changed by "
-						+ Math.abs(user.getCurrency().getPercent_change_1h()) + "% in 1h");
+						+ user.getCurrency().getPercent_change_1h() + "% in 1h");
 			}
 			if (Math.abs(currency.getPercent_change_24h()) > 1) { // запись в лог при изменении курса более, чем на 1% за 24 часа
 				LOGGER.warn("Symbol: " + user.getCurrency().getSymbol() + ", User: " + user.getUsername() + ", The rate has changed by "
-						+ Math.abs(user.getCurrency().getPercent_change_24h()) + "% in 24h");
+						+ user.getCurrency().getPercent_change_24h() + "% in 24h");
 			}
 			if (Math.abs(currency.getPercent_change_7d()) > 1) { // запись в лог при изменении курса более, чем на 1% за день
 				LOGGER.warn("Symbol: " + user.getCurrency().getSymbol() + ", User: " + user.getUsername() + ", The rate has changed by "
-						+ Math.abs(user.getCurrency().getPercent_change_7d()) + "% in 7d");
+						+ user.getCurrency().getPercent_change_7d() + "% in 7d");
 			}
 		}
 	}
@@ -71,8 +73,8 @@ public class CurrencyService {
 	@Async
 	public void loadCurrency() throws InterruptedException {
 		while(true) {
-			currencies = currencyWebRepository.loadAllCurrencies();
-			check();
+			List<Currency> currencies = currencyWebRepository.loadAllCurrencies();
+			check(currencies);
 			Thread.sleep(60000);
 			//return CompletableFuture.completedFuture(currencies);
 		}
